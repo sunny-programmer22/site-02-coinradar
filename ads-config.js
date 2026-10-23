@@ -1,4 +1,4 @@
-/**
+﻿/**
  * CoinRadar - HilltopAds Comprehensive Integration Configuration
  * ==============================================================
  * This script handles all HilltopAds ad formats and zones:
@@ -185,7 +185,7 @@
     ippEl.className = 'hta-ipp-card slide-in-up';
     ippEl.innerHTML = `
       <div class="ipp-header">
-        <span class="ipp-tag">HilltopAds MultiTag • Zone 2</span>
+        <span class="ipp-tag">HilltopAds MultiTag â€¢ Zone 2</span>
         <button class="ipp-close" id="ipp-close-btn" title="Dismiss">&times;</button>
       </div>
       <div class="ipp-body">
@@ -195,7 +195,7 @@
           </svg>
         </div>
         <div class="ipp-content">
-          <h4>🔥 Whale Movement Detected</h4>
+          <h4>ðŸ”¥ Whale Movement Detected</h4>
           <p>Binance inflow +2,400 BTC ($162M). Review institutional buy walls before weekly close.</p>
         </div>
       </div>
@@ -402,7 +402,7 @@
     if (!CFG.debugMode) return;
     const toast = document.createElement('div');
     toast.className = 'hta-debug-toast';
-    toast.innerHTML = `<span>⚡</span> <span>${text}</span>`;
+    toast.innerHTML = `<span>âš¡</span> <span>${text}</span>`;
     document.body.appendChild(toast);
     setTimeout(() => {
       toast.classList.add('fade-out');
@@ -422,3 +422,4 @@
   });
 
 })();
+

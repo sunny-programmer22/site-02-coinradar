@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinRadar - Crypto Tracker, DeFi & Web3 Insights</title>
+  <meta name="description" content="CoinRadar provides real-time crypto prices, DeFi analytics, institutional market analysis, and trending Web3 alpha signals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP CRYPTO TICKER (Infinite Live Tape)
+       ========================================== -->
+  <div class="ticker-wrap" aria-label="Live Crypto Prices Ticker">
+    <div class="ticker-inner" id="ticker-scroll-content">
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟠</span> BTC</span>
+        <span class="ticker-price">$67,842.10</span>
+        <span class="ticker-change up">+3.42%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🔷</span> ETH</span>
+        <span class="ticker-price">$2,638.50</span>
+        <span class="ticker-change up">+2.18%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟣</span> SOL</span>
+        <span class="ticker-price">$174.20</span>
+        <span class="ticker-change up">+6.15%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟡</span> BNB</span>
+        <span class="ticker-price">$594.30</span>
+        <span class="ticker-change up">+1.12%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>💧</span> SUI</span>
+        <span class="ticker-price">$2.18</span>
+        <span class="ticker-change up">+14.65%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🧠</span> TAO</span>
+        <span class="ticker-price">$589.50</span>
+        <span class="ticker-change up">+8.30%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🔵</span> ARB</span>
+        <span class="ticker-price">$0.582</span>
+        <span class="ticker-change down">-1.24%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>⚡</span> NEAR</span>
+        <span class="ticker-price">$5.14</span>
+        <span class="ticker-change up">+4.85%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🎨</span> RENDER</span>
+        <span class="ticker-price">$6.42</span>
+        <span class="ticker-change up">+5.10%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🌐</span> LINK</span>
+        <span class="ticker-price">$11.85</span>
+        <span class="ticker-change down">-0.45%</span>
+      </div>
+
+      <!-- Duplicate items for smooth infinite loop -->
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟠</span> BTC</span>
+        <span class="ticker-price">$67,842.10</span>
+        <span class="ticker-change up">+3.42%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🔷</span> ETH</span>
+        <span class="ticker-price">$2,638.50</span>
+        <span class="ticker-change up">+2.18%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟣</span> SOL</span>
+        <span class="ticker-price">$174.20</span>
+        <span class="ticker-change up">+6.15%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🟡</span> BNB</span>
+        <span class="ticker-price">$594.30</span>
+        <span class="ticker-change up">+1.12%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>💧</span> SUI</span>
+        <span class="ticker-price">$2.18</span>
+        <span class="ticker-change up">+14.65%</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol"><span>🧠</span> TAO</span>
+        <span class="ticker-price">$589.50</span>
+        <span class="ticker-change up">+8.30%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="CoinRadar Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+            <path d="M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"></path>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <span class="brand-text">Coin<span>Radar</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#markets" class="active">Markets</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#video-briefing">Video Briefing</a></li>
+        <li><a href="#web3">Web3 Radar</a></li>
+        <li><a href="#airdrops">Airdrops</a></li>
+        <li><a href="#converter">Converter</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="gas-indicator" title="Current Ethereum Mainnet Gas Base Fee">
+          <span class="gas-dot"></span>
+          <span>⛽ 16 Gwei</span>
+        </div>
+        <!-- Zone 5 Direct Link CTA -->
+        <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=trade_nav" target="_blank" rel="noopener noreferrer" class="btn-cta-nav smartlink-trigger" data-ad-zone="zone5" data-intent="trade">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+          Trade Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       AD ZONE 3: TOP LEADERBOARD BANNER (728x90)
+       ========================================== -->
+  <div class="container ad-slot-wrapper">
+    <div class="ad-label-bar">
+      <span>Advertisement</span>
+      <span class="ad-tag-badge">HilltopAds MultiTag • Zone 3 Leaderboard</span>
+    </div>
+    <!-- HilltopAds MultiTag Banner Slot 728x90 -->
+    <div id="ad-zone-leaderboard" class="ad-leaderboard-box">
+      <div class="ad-info">
+        <div class="ad-icon-shield">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div class="ad-text">
+          <h5>Institutional Liquidity & High-Yield Staking Pools</h5>
+          <p>Zero maker fees, up to 18.5% APY on USDT/ETH, and $100 welcome rebate for new accounts.</p>
+        </div>
+      </div>
+      <!-- Zone 5 SmartLink Trigger on Banner -->
+      <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=banner_leaderboard" target="_blank" rel="noopener noreferrer" class="btn-ad-action smartlink-trigger" data-ad-zone="zone5" data-intent="trade">
+        Explore Offers &rarr;
+      </a>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- ==========================================
+         HERO / MARKET STATS OVERVIEW
+         ========================================== -->
+    <section class="hero-section">
+      <div class="hero-header">
+        <div class="hero-title">
+          <h1>Live Crypto Market <span>Radar & Intelligence</span></h1>
+          <p>Real-time pricing, institutional flow tracking, and decentralized Web3 ecosystem metrics.</p>
+        </div>
+        <div class="hero-quick-actions">
+          <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=airdrop_hero" target="_blank" rel="noopener noreferrer" class="btn-smartlink-secondary btn-claim-airdrop smartlink-trigger" data-ad-zone="zone5" data-intent="airdrop">
+            🎁 Claim Airdrops
+          </a>
+          <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=trade_hero" target="_blank" rel="noopener noreferrer" class="btn-smartlink-primary btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">
+            🚀 Trade Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Cards -->
+      <div class="stat-cards-grid">
+        <div class="stat-card">
+          <div class="stat-card-title">
+            <span>Market Cap</span>
+            <span>🌐</span>
+          </div>
+          <div class="stat-card-value">$2.482T</div>
+          <div class="stat-card-change up">▲ +3.18% (24h)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">
+            <span>24h Trading Vol</span>
+            <span>📊</span>
+          </div>
+          <div class="stat-card-value">$89.45B</div>
+          <div class="stat-card-change up">▲ +8.40% (24h)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">
+            <span>BTC Dominance</span>
+            <span>🟠</span>
+          </div>
+          <div class="stat-card-value">54.82%</div>
+          <div class="stat-card-change up">▲ +0.35%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">
+            <span>DeFi TVL</span>
+            <span>🔒</span>
+          </div>
+          <div class="stat-card-value">$96.84B</div>
+          <div class="stat-card-change up">▲ +4.25%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">
+            <span>Fear & Greed</span>
+            <span>⚡</span>
+          </div>
+          <div class="stat-card-value" style="color: var(--crypto-green-light);">74 / 100</div>
+          <div class="stat-card-change up">Greed Mode</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LIVE MARKET OVERVIEW TABLE SECTION
+         ========================================== -->
+    <section class="market-overview-section" id="markets">
+      <div class="section-head">
+        <div class="section-title">
+          <h2>Top Digital Assets Overview</h2>
+          <span class="live-pulse"><span class="pulse-dot"></span> Live Feeds</span>
+        </div>
+        <div class="table-controls">
+          <div class="table-filter-tabs">
+            <button class="filter-tab active" data-category="all">All Cryptos</button>
+            <button class="filter-tab" data-category="defi">DeFi</button>
+            <button class="filter-tab" data-category="layer1">Layer 1/2</button>
+            <button class="filter-tab" data-category="web3">AI & Web3</button>
+          </div>
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="crypto-search" placeholder="Search coin or symbol...">
+          </div>
+        </div>
+      </div>
+
+      <div class="crypto-table-card">
+        <div class="table-responsive">
+          <table class="crypto-table" id="market-table">
+            <thead>
+              <tr>
+                <th style="width: 40px;">#</th>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>1h %</th>
+                <th>24h %</th>
+                <th>7d %</th>
+                <th>24h Volume</th>
+                <th>Market Cap</th>
+                <th>Last 7 Days</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="crypto-table-body">
+              <!-- Bitcoin -->
+              <tr data-category="layer1 all" data-name="bitcoin btc">
+                <td class="crypto-rank">1</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #f7931a;">₿</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Bitcoin</span>
+                      <span class="crypto-symbol">BTC</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$67,842.10</td>
+                <td class="crypto-change up">+0.42%</td>
+                <td class="crypto-change up">+3.42%</td>
+                <td class="crypto-change up">+7.18%</td>
+                <td>$38.45B</td>
+                <td>$1.341T</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 28 Q 20 25, 40 18 T 80 12 T 120 4" fill="none" stroke="#10b981" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Ethereum -->
+              <tr data-category="layer1 defi all" data-name="ethereum eth">
+                <td class="crypto-rank">2</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #627eea;">Ξ</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Ethereum</span>
+                      <span class="crypto-symbol">ETH</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$2,638.50</td>
+                <td class="crypto-change up">+0.25%</td>
+                <td class="crypto-change up">+2.18%</td>
+                <td class="crypto-change up">+4.95%</td>
+                <td>$18.12B</td>
+                <td>$317.4B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 30 Q 30 28, 60 16 T 100 14 T 120 6" fill="none" stroke="#10b981" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Solana -->
+              <tr data-category="layer1 defi all" data-name="solana sol">
+                <td class="crypto-rank">3</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: linear-gradient(135deg, #9945FF, #14F195);">◎</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Solana</span>
+                      <span class="crypto-symbol">SOL</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$174.20</td>
+                <td class="crypto-change up">+1.10%</td>
+                <td class="crypto-change up">+6.15%</td>
+                <td class="crypto-change up">+16.40%</td>
+                <td>$5.82B</td>
+                <td>$81.8B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 32 Q 35 24, 70 12 T 120 3" fill="none" stroke="#10b981" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Sui -->
+              <tr data-category="layer1 all" data-name="sui network">
+                <td class="crypto-rank">4</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #4da2ff;">💧</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Sui Network</span>
+                      <span class="crypto-symbol">SUI</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$2.18</td>
+                <td class="crypto-change up">+2.40%</td>
+                <td class="crypto-change up">+14.65%</td>
+                <td class="crypto-change up">+28.30%</td>
+                <td>$1.85B</td>
+                <td>$6.12B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 34 Q 40 28, 80 10 T 120 2" fill="none" stroke="#10b981" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Bittensor (TAO) -->
+              <tr data-category="web3 all" data-name="bittensor tao ai">
+                <td class="crypto-rank">5</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #111; border: 1px solid #7c3aed;">🧠</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Bittensor</span>
+                      <span class="crypto-symbol">TAO</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$589.50</td>
+                <td class="crypto-change up">+0.80%</td>
+                <td class="crypto-change up">+8.30%</td>
+                <td class="crypto-change up">+22.10%</td>
+                <td>$640M</td>
+                <td>$4.35B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 32 Q 40 25, 75 12 T 120 4" fill="none" stroke="#10b981" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Chainlink -->
+              <tr data-category="defi web3 all" data-name="chainlink link oracle">
+                <td class="crypto-rank">6</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #375bd2;">⬡</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Chainlink</span>
+                      <span class="crypto-symbol">LINK</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$11.85</td>
+                <td class="crypto-change down">-0.15%</td>
+                <td class="crypto-change down">-0.45%</td>
+                <td class="crypto-change up">+3.10%</td>
+                <td>$410M</td>
+                <td>$7.21B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 18 Q 30 10, 60 22 T 90 14 T 120 18" fill="none" stroke="#ef4444" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+
+              <!-- Arbitrum -->
+              <tr data-category="layer1 defi all" data-name="arbitrum arb layer2">
+                <td class="crypto-rank">7</td>
+                <td>
+                  <div class="crypto-asset-cell">
+                    <div class="crypto-icon" style="background: #28a0f0;">💙</div>
+                    <div class="crypto-name-col">
+                      <span class="crypto-name">Arbitrum</span>
+                      <span class="crypto-symbol">ARB</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="crypto-price">$0.582</td>
+                <td class="crypto-change down">-0.30%</td>
+                <td class="crypto-change down">-1.24%</td>
+                <td class="crypto-change up">+5.80%</td>
+                <td>$290M</td>
+                <td>$2.08B</td>
+                <td>
+                  <svg class="sparkline-svg" viewBox="0 0 120 36">
+                    <path d="M0 16 Q 40 10, 70 24 T 120 22" fill="none" stroke="#ef4444" stroke-width="2.5" />
+                  </svg>
+                </td>
+                <td style="text-align: right;">
+                  <button class="btn-trade smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN CONTENT GRID: Left Content & Right Sidebar
+         ========================================== -->
+    <div class="content-grid-layout">
+      <!-- Left Column: Articles, Video Player, Web3 Radar -->
+      <div class="main-content-column">
+
+        <!-- Bitcoin & Ethereum Deep-Dive Analysis -->
+        <article class="analysis-article-card" id="analysis">
+          <div class="article-meta-tags">
+            <span class="meta-tag purple">Macro Research</span>
+            <span class="meta-tag green">Technical Pivot</span>
+            <span class="meta-tag purple">Institutional Flows</span>
+          </div>
+
+          <h2 class="article-title">
+            Q4 Market Outlook: Institutional ETF Inflows, Liquidity Expansion & Ethereum Layer-2 Breakouts
+          </h2>
+
+          <div class="article-author-bar">
+            <div class="author-avatar">CR</div>
+            <div>
+              <strong>CoinRadar Research Desk</strong> • Published October 23, 2026 • 6 min read
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              As global central banks initiate monetary easing cycles and the Federal Reserve adjusts its benchmark rate trajectory, the broader digital asset spectrum is experiencing an aggressive structural repricing. Bitcoin (BTC) has firmly reclaimed the critical $66,000 to $68,500 accumulation range, powered by consistent net-positive institutional ETF inflows surpassing $1.4B over the trailing five trading sessions.
+            </p>
+
+            <div class="takeaway-box">
+              <h4>⚡ Strategic Alpha Takeaways</h4>
+              <ul>
+                <li><strong>BTC Resistance Pivot:</strong> A daily candle close above $68,800 clears path toward previous all-time highs ($73,700), invalidating bears.</li>
+                <li><strong>Ethereum Dencun Economics:</strong> L2 rollup execution costs on Arbitrum, Base, and Optimism remain reduced by 85%, driving record active wallet addresses.</li>
+                <li><strong>DeFi TVL Resurgence:</strong> Liquid restaking yields and institutional tokenized real-world assets (RWAs) on Ethereum are compounding at 12-18% APR.</li>
+              </ul>
+            </div>
+
+            <h3>Ethereum Staking Dynamics & Layer-2 Liquidity Influx</h3>
+            <p>
+              While Bitcoin commands headline dominance, Ethereum's fundamental supply dynamics continue to quietly tighten. Over 28.5% of circulating ETH is locked in validator contracts, establishing a robust yield floor for institutional participants. Concurrently, Layer-2 throughput has eclipsed 240 transactions per second (TPS), cementing rollups as the primary execution venues for retail swaps, yield vaults, and decentralized derivatives.
+            </p>
+            <p>
+              Key on-chain indicators highlight substantial whale accumulation around the $2,580 - $2,620 support band. Traders should monitor the ETH/BTC ratio closely as historically, sustained breakouts above the 0.042 threshold trigger widespread altcoin capital rotation.
+            </p>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             ZONE 6: VIDEO VAST PLAYER (Market Briefing)
+             ========================================== -->
+        <section class="video-vast-section" id="video-briefing">
+          <div class="video-section-header">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              Daily Crypto Briefing: Technical Charts & Alpha Calls
+            </h3>
+            <span class="ad-tag-badge">HilltopAds VAST • Zone 6</span>
+          </div>
+
+          <!-- Video Player Wrapper with VAST Ad Overlay -->
+          <div class="vast-player-wrapper" id="market-briefing-player-box">
+            <!-- Simulated Market Briefing Video Element -->
+            <video id="market-briefing-player" class="market-video" poster="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80" controls>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- VAST Ad Overlay Container -->
+            <div id="vast-ad-overlay" class="vast-overlay">
+              <div class="vast-top-bar">
+                <span class="vast-ad-tag">HilltopAds Video VAST Ad</span>
+                <span class="vast-timer">Ad plays for <span id="vast-timer-count">5</span>s</span>
+              </div>
+
+              <!-- Interactive Ad Content Box (Zone 5 Direct Link Trigger) -->
+              <div class="vast-ad-content" title="Click to open sponsored offer">
+                <h3>⚡ Trade With <span>Zero Fees</span> on Tier-1 Crypto Exchange</h3>
+                <p>Unlock $500 Welcome Bonus, 100x Leverage on BTC/ETH & Automated DCA Bots.</p>
+                <span class="vast-ad-cta-preview">Claim Bonus Now &rarr;</span>
+              </div>
+
+              <div class="vast-bottom-bar">
+                <button id="vast-skip-btn" class="btn-skip-vast disabled" disabled>
+                  Skip Ad in <span id="vast-timer-count">5</span>s
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+            <p style="font-size: 12.5px; color: var(--text-secondary);">
+              Video stream integrates <strong>HilltopAds Zone 6 Video VAST</strong> preroll protocol with automatic monetization fallbacks.
+            </p>
+            <button id="vast-play-btn" class="vast-start-btn">
+              ▶ Test VAST Pre-Roll Ad
+            </button>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             TRENDING WEB3 & DEFI TOKENS SPOTLIGHT
+             ========================================== -->
+        <section class="trending-web3-section" id="web3">
+          <div class="section-title">
+            <h2>Trending Web3 & DeFi Ecosystems</h2>
+            <span class="live-pulse"><span class="pulse-dot"></span> Alpha Watchlist</span>
+          </div>
+
+          <div class="trending-cards-grid">
+            <!-- Card 1: Bittensor -->
+            <div class="web3-token-card">
+              <div>
+                <div class="token-card-top">
+                  <div class="token-identity">
+                    <div class="token-logo-circle" style="background: linear-gradient(135deg, #10b981, #059669);">🧠</div>
+                    <div>
+                      <strong style="color: #fff; font-size: 14px;">Bittensor</strong>
+                      <div style="font-size: 11px; color: var(--text-muted);">TAO</div>
+                    </div>
+                  </div>
+                  <span class="token-tag-category">AI Subnets</span>
+                </div>
+                <div class="token-stats-row">
+                  <div>
+                    <span style="font-size: 11px; color: var(--text-muted); display: block;">Current Price</span>
+                    <span class="token-price-display">$589.50</span>
+                  </div>
+                  <span class="stat-card-change up">+8.30%</span>
+                </div>
+                <p class="token-narrative-desc">
+                  Decentralized machine intelligence incentives. Dominating the AI narrative with record subnet deployments.
+                </p>
+              </div>
+              <button class="btn-web3-action smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade TAO</button>
+            </div>
+
+            <!-- Card 2: Ondo Finance -->
+            <div class="web3-token-card">
+              <div>
+                <div class="token-card-top">
+                  <div class="token-identity">
+                    <div class="token-logo-circle" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">🏛️</div>
+                    <div>
+                      <strong style="color: #fff; font-size: 14px;">Ondo Finance</strong>
+                      <div style="font-size: 11px; color: var(--text-muted);">ONDO</div>
+                    </div>
+                  </div>
+                  <span class="token-tag-category">RWA Protocol</span>
+                </div>
+                <div class="token-stats-row">
+                  <div>
+                    <span style="font-size: 11px; color: var(--text-muted); display: block;">Current Price</span>
+                    <span class="token-price-display">$0.785</span>
+                  </div>
+                  <span class="stat-card-change up">+11.4%</span>
+                </div>
+                <p class="token-narrative-desc">
+                  Tokenized US Treasuries and institutional liquidity vaults backed by BlackRock's BUIDL fund.
+                </p>
+              </div>
+              <button class="btn-web3-action smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade ONDO</button>
+            </div>
+
+            <!-- Card 3: Pendle Finance -->
+            <div class="web3-token-card">
+              <div>
+                <div class="token-card-top">
+                  <div class="token-identity">
+                    <div class="token-logo-circle" style="background: linear-gradient(135deg, #06b6d4, #0284c7);">⏳</div>
+                    <div>
+                      <strong style="color: #fff; font-size: 14px;">Pendle</strong>
+                      <div style="font-size: 11px; color: var(--text-muted);">PENDLE</div>
+                    </div>
+                  </div>
+                  <span class="token-tag-category">Yield Trading</span>
+                </div>
+                <div class="token-stats-row">
+                  <div>
+                    <span style="font-size: 11px; color: var(--text-muted); display: block;">Current Price</span>
+                    <span class="token-price-display">$4.65</span>
+                  </div>
+                  <span class="stat-card-change up">+5.85%</span>
+                </div>
+                <p class="token-narrative-desc">
+                  Yield tokenization protocol unlocking fixed rate yields and speculation on liquid restaking points.
+                </p>
+              </div>
+              <button class="btn-web3-action smartlink-trigger" data-ad-zone="zone5" data-intent="trade">Trade PENDLE</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             INTERACTIVE CRYPTO CONVERTER
+             ========================================== -->
+        <section class="converter-widget" id="converter">
+          <div class="section-title">
+            <h2>Instant Crypto Converter</h2>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+            Calculate exchange values across leading cryptographic assets in real time.
+          </p>
+
+          <div class="converter-inputs-grid">
+            <div class="converter-field">
+              <label for="convert-amount">Amount</label>
+              <div class="converter-input-box">
+                <input type="number" id="convert-amount" value="1.0" step="any">
+                <select id="convert-from" aria-label="Convert From Currency">
+                  <option value="BTC" selected>BTC</option>
+                  <option value="ETH">ETH</option>
+                  <option value="SOL">SOL</option>
+                  <option value="USDT">USDT</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="converter-swap-btn" id="converter-swap-btn" title="Swap currencies" aria-label="Swap Currencies">
+              ⇄
+            </button>
+
+            <div class="converter-field">
+              <label for="convert-result">Converted Est.</label>
+              <div class="converter-input-box">
+                <input type="text" id="convert-result" value="$67,842.10" readonly>
+                <select id="convert-to" aria-label="Convert To Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="USDT">USDT</option>
+                  <option value="BTC">BTC</option>
+                  <option value="ETH">ETH</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ==========================================
+           RIGHT SIDEBAR
+           ========================================== -->
+      <aside class="sidebar-column">
+
+        <!-- ZONE 3: SIDEBAR MULTITAG BANNER (300x250) -->
+        <div class="ad-sidebar-box" id="ad-zone-sidebar-square">
+          <div class="ad-sidebar-header">
+            <span class="ad-sidebar-badge">HilltopAds MultiTag • Zone 3</span>
+            <span style="font-size: 11px; color: var(--text-muted);">Sponsored</span>
+          </div>
+          <div class="ad-sidebar-content">
+            <div class="crypto-ad-token">💎</div>
+            <h4>Earn 14.8% APY on Crypto</h4>
+            <p>Institutional multi-asset staking with zero lockups & daily automated compounding rewards.</p>
+          </div>
+          <!-- Zone 5 SmartLink Trigger on Sidebar Banner -->
+          <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=banner_sidebar" target="_blank" rel="noopener noreferrer" class="btn-ad-action smartlink-trigger" style="text-align: center;" data-ad-zone="zone5" data-intent="trade">
+            Start Staking Now &rarr;
+          </a>
+        </div>
+
+        <!-- Fear & Greed Meter -->
+        <div class="sidebar-widget fear-greed-meter">
+          <div class="sidebar-widget-title">
+            <span>Market Sentiment</span>
+            <span style="font-size: 12px; color: var(--crypto-green-light);">● Updated Live</span>
+          </div>
+
+          <div class="gauge-circle">
+            <div class="gauge-arc"></div>
+          </div>
+          <div class="gauge-val-big">74</div>
+          <div class="gauge-status">Greed Sentiment</div>
+
+          <div class="gauge-history-list">
+            <div class="gauge-history-item">
+              <span>Yesterday:</span>
+              <span>71 (Greed)</span>
+            </div>
+            <div class="gauge-history-item">
+              <span>Last Week:</span>
+              <span>65 (Greed)</span>
+            </div>
+            <div class="gauge-history-item">
+              <span>Last Month:</span>
+              <span>48 (Neutral)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UPCOMING AIRDROPS & TGE CALENDAR (Zone 5 Direct Link Integrations) -->
+        <div class="sidebar-widget" id="airdrops">
+          <div class="sidebar-widget-title">
+            <span>🔥 Alpha Airdrops</span>
+            <span class="meta-tag green">Verified</span>
+          </div>
+
+          <div class="airdrop-item">
+            <div class="airdrop-info">
+              <h5>Monad Network TGE</h5>
+              <span>EVM 10,000 TPS • Est. Q4 2026</span>
+            </div>
+            <button class="btn-claim-airdrop smartlink-trigger" data-ad-zone="zone5" data-intent="airdrop">Claim</button>
+          </div>
+
+          <div class="airdrop-item">
+            <div class="airdrop-info">
+              <h5>Berachain bArtio</h5>
+              <span>Proof of Liquidity • Final Testnet</span>
+            </div>
+            <button class="btn-claim-airdrop smartlink-trigger" data-ad-zone="zone5" data-intent="airdrop">Claim</button>
+          </div>
+
+          <div class="airdrop-item">
+            <div class="airdrop-info">
+              <h5>Scroll Ecosystem S2</h5>
+              <span>zkRollup Rewards • Snapshot Soon</span>
+            </div>
+            <button class="btn-claim-airdrop smartlink-trigger" data-ad-zone="zone5" data-intent="airdrop">Claim</button>
+          </div>
+
+          <div class="airdrop-item">
+            <div class="airdrop-info">
+              <h5>Initia Layer-1 Rollup</h5>
+              <span>Interwoven Rollups • Whitelist Open</span>
+            </div>
+            <button class="btn-claim-airdrop smartlink-trigger" data-ad-zone="zone5" data-intent="airdrop">Claim</button>
+          </div>
+        </div>
+
+        <!-- Whale Alert Newsletter -->
+        <div class="sidebar-widget whale-newsletter">
+          <div class="sidebar-widget-title">
+            <span>Whale Movement Alerts</span>
+            <span>🐋</span>
+          </div>
+          <p>Get instant on-chain notifications whenever wallet clusters move > 1,000 BTC or 15,000 ETH.</p>
+          <form class="whale-form" onsubmit="event.preventDefault(); alert('Subscribed to CoinRadar Whale Alerts!');">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn-whale-submit">Subscribe to Alerts</button>
+          </form>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- ==========================================
+       ZONE 4: VIDEO SLIDER MULTITAG (Floating)
+       ========================================== -->
+  <div id="ad-zone-video-slider" class="ad-video-slider">
+    <div class="slider-top-bar">
+      <span class="slider-badge">HilltopAds MultiTag • Zone 4</span>
+      <button class="video-slider-close" title="Dismiss">&times;</button>
+    </div>
+    <div class="slider-body">
+      <div class="slider-media-box">
+        <span class="slider-media-badge">Live Market Stream</span>
+        <video autoplay muted loop playsinline>
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="slider-content">
+        <h5>Exclusive Crypto Arbitrage Bot</h5>
+        <p>Hedge volatility across top decentralized DEX pools automatically.</p>
+      </div>
+      <!-- Zone 5 SmartLink Trigger on Slider CTA -->
+      <a href="https://hilltopads.com/smartlink/?zoneid=1005678&intent=video_slider" target="_blank" rel="noopener noreferrer" class="btn-ad-action smartlink-trigger" style="display: block; text-align: center;" data-ad-zone="zone5" data-intent="trade">
+        Unlock Bot Access &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+              </svg>
+            </div>
+            <span class="brand-text">Coin<span>Radar</span></span>
+          </div>
+          <p>
+            The premier platform for real-time cryptocurrency tracking, decentralized finance intelligence, and institutional Web3 research.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://x.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Twitter">𝕏</a>
+            <a href="https://t.me" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Telegram">✈</a>
+            <a href="https://discord.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Discord">👾</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">💻</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Markets</h5>
+          <ul>
+            <li><a href="#markets">Top 100 Cryptocurrencies</a></li>
+            <li><a href="#markets">DeFi Yield Rankings</a></li>
+            <li><a href="#web3">AI & DePIN Tokens</a></li>
+            <li><a href="#markets">Real World Assets (RWA)</a></li>
+            <li><a href="#markets">Derivatives Volume</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Research</h5>
+          <ul>
+            <li><a href="#analysis">Macro Market Outlook</a></li>
+            <li><a href="#video-briefing">Daily Video Briefings</a></li>
+            <li><a href="#airdrops">Airdrop Calendar</a></li>
+            <li><a href="#analysis">Tokenomics Teardowns</a></li>
+            <li><a href="#analysis">Ethereum Gas Analysis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Monetization & Ads</h5>
+          <ul>
+            <li><a href="#">HilltopAds Network Partner</a></li>
+            <li><a href="#">Zone 1: Popunder / OnClick</a></li>
+            <li><a href="#">Zone 2: In-Page Push (IPP)</a></li>
+            <li><a href="#">Zone 3: MultiTag Banners</a></li>
+            <li><a href="#">Zone 4: Video Slider</a></li>
+            <li><a href="#">Zone 5: SmartLink Routing</a></li>
+            <li><a href="#">Zone 6: Video VAST Tags</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Financial & Advertising Disclaimers -->
+      <div class="footer-disclaimer-box">
+        <strong>Risk Disclosure & Advertising Transparency:</strong> All information provided on CoinRadar is compiled strictly for informational, educational, and analytical purposes and does not constitute financial, investment, legal, or tax advice. Cryptocurrency trading involves substantial market risk and potential loss of capital. This portal utilizes the HilltopAds monetization infrastructure (including MultiTag banners, Popunder, In-Page Push, Video Sliders, Direct Links, and VAST video tags) to sustainably support free, high-speed market research and on-chain intelligence.
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 CoinRadar. All rights reserved. Powered by decentralized data feeds.</span>
+        <span>HilltopAds Verified Integration • Fast CDN Optimized</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCRIPTS: HilltopAds Config & App Interactivity
+       ========================================== -->
+  <script src="ads-config.js"></script>
+
+  <script>
+    // Front-end interactive functionality for CoinRadar
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. Table Filtering by Category
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const tableRows = document.querySelectorAll('#crypto-table-body tr');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const category = tab.getAttribute('data-category');
+          tableRows.forEach(row => {
+            const rowCat = row.getAttribute('data-category') || '';
+            if (category === 'all' || rowCat.includes(category)) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 2. Table Real-Time Search Filter
+      const searchInput = document.getElementById('crypto-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          tableRows.forEach(row => {
+            const name = row.getAttribute('data-name') || '';
+            if (name.includes(query)) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      }
+
+      // 3. Crypto Converter Calculation
+      const amountInput = document.getElementById('convert-amount');
+      const fromSelect = document.getElementById('convert-from');
+      const toSelect = document.getElementById('convert-to');
+      const resultInput = document.getElementById('convert-result');
+      const swapBtn = document.getElementById('converter-swap-btn');
+
+      const pricesInUSD = {
+        BTC: 67842.10,
+        ETH: 2638.50,
+        SOL: 174.20,
+        USDT: 1.00,
+        USD: 1.00
+      };
+
+      function updateConversion() {
+        const amount = parseFloat(amountInput.value) || 0;
+        const from = fromSelect.value;
+        const to = toSelect.value;
+
+        const fromPrice = pricesInUSD[from] || 1;
+        const toPrice = pricesInUSD[to] || 1;
+
+        const valInUSD = amount * fromPrice;
+        const converted = valInUSD / toPrice;
+
+        if (to === 'USD' || to === 'USDT') {
+          resultInput.value = '$' + converted.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        } else {
+          resultInput.value = converted.toFixed(6) + ' ' + to;
+        }
+      }
+
+      if (amountInput && fromSelect && toSelect && resultInput) {
+        amountInput.addEventListener('input', updateConversion);
+        fromSelect.addEventListener('change', updateConversion);
+        toSelect.addEventListener('change', updateConversion);
+      }
+
+      if (swapBtn) {
+        swapBtn.addEventListener('click', () => {
+          const temp = fromSelect.value;
+          fromSelect.value = toSelect.value;
+          toSelect.value = temp;
+          updateConversion();
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
